@@ -1,0 +1,266 @@
+/* Orders Page */
+.orders-page {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+    url('../assets/comic-readers.jpg') center/cover fixed;
+  min-height: 100%;
+  padding: 2rem 0;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.no-orders h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.no-orders p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.orders-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.orders-header h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.orders-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.order-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e8ed;
+}
+
+.order-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.order-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.order-status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #f39c12;
+  color: white;
+}
+
+.status-completed {
+  background-color: #27ae60;
+  color: white;
+}
+
+.status-canceled {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.status-payment_failed {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.order-date {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.order-items {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-image {
+  position: relative;
+  width: 60px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item-name {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.item-publisher,
+.item-series {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.item-quantity-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.item-quantity {
+  font-weight: bold;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-total {
+  font-weight: bold;
+  color: #27ae60;
+  font-size: 1.1rem;
+}
+
+.order-summary {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.summary-row.total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  border-top: 2px solid #e1e8ed;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-list {
+    padding: 0 1rem;
+  }
+
+  .order-card {
+    padding: 1.5rem;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .order-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .item-image {
+    width: 50px;
+    height: 65px;
+  }
+
+  .item-details {
+    flex: 1;
+  }
+
+  .item-quantity-price {
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: api-security-project
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: supersecretjwtkeyforrenderproduction2025
+      - key: DB_PATH
+        value: ./database.sqlite
+    healthCheckPath: /health
